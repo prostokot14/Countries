@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -32,10 +33,29 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="M6k-ZJ-8ci"/>
+                    <connections>
+                        <segue destination="ZWI-RG-8ly" kind="show" identifier="showDetailed" id="7bc-YF-j3g"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eYG-M0-aKl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="953.43511450381675" y="2.8169014084507045"/>
+        </scene>
+        <!--Detailed View Controller-->
+        <scene sceneID="N8Q-Me-ykG">
+            <objects>
+                <viewController id="ZWI-RG-8ly" customClass="DetailedViewController" customModule="MilestoneProjects13_15" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KKB-hV-Bwr">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="CM0-jp-1Ai"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5HL-v3-7Il"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6pV-Kd-bMj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1894" y="3"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Bth-oL-tkg">

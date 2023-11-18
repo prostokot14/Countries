@@ -19,8 +19,18 @@ final class CountriesViewController: UITableViewController {
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "countryCell")
     }
-
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetailed" {
+            if
+                let cell = sender as? UITableViewCell,
+                let indexPath = tableView.indexPath(for: cell),
+                let detailedViewController = segue.destination as? DetailedViewController
+            {
+                detailedViewController.title = countries[indexPath.row]
+            }
+        }
+    }
 }
 
 extension CountriesViewController {
@@ -42,5 +52,15 @@ extension CountriesViewController {
         }
         
         return cell
+    }
+}
+
+
+extension CountriesViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        performSegue(withIdentifier: "showDetailed", sender: cell)
     }
 }

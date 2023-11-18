@@ -13,6 +13,7 @@
 		CBE10D4B2B09279700A1FC32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBE10D492B09279700A1FC32 /* Main.storyboard */; };
 		CBE10D4D2B09279E00A1FC32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBE10D4C2B09279E00A1FC32 /* Assets.xcassets */; };
 		CBE10D502B09279E00A1FC32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBE10D4E2B09279E00A1FC32 /* LaunchScreen.storyboard */; };
+		CBE10D582B092E9800A1FC32 /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE10D572B092E9800A1FC32 /* DetailedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		CBE10D4C2B09279E00A1FC32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CBE10D4F2B09279E00A1FC32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CBE10D512B09279E00A1FC32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBE10D572B092E9800A1FC32 /* DetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				CBE10D432B09279700A1FC32 /* AppDelegate.swift */,
 				CBE10D452B09279700A1FC32 /* SceneDelegate.swift */,
 				CBE10D472B09279700A1FC32 /* CountriesViewController.swift */,
+				CBE10D572B092E9800A1FC32 /* DetailedViewController.swift */,
 				CBE10D492B09279700A1FC32 /* Main.storyboard */,
 				CBE10D4C2B09279E00A1FC32 /* Assets.xcassets */,
 				CBE10D4E2B09279E00A1FC32 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				CBE10D482B09279700A1FC32 /* CountriesViewController.swift in Sources */,
 				CBE10D442B09279700A1FC32 /* AppDelegate.swift in Sources */,
+				CBE10D582B092E9800A1FC32 /* DetailedViewController.swift in Sources */,
 				CBE10D462B09279700A1FC32 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
