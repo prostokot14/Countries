@@ -12,12 +12,14 @@ final class DetailedViewController: UIViewController {
     @IBOutlet private var areaLabel: UILabel!
     @IBOutlet private var capitalLabel: UILabel!
     @IBOutlet private var populationLabel: UILabel!
+    @IBOutlet private var flagImageView: UIImageView!
     
     var countryTitle = ""
     var region = ""
     var area = ""
     var capital = ""
     var population = ""
+    var flagURL = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,5 +31,17 @@ final class DetailedViewController: UIViewController {
         areaLabel.text = area
         capitalLabel.text = capital
         populationLabel.text = population
+        
+        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+            if
+                let url = URL(string: self?.flagURL ?? ""),
+                let data = try? Data(contentsOf: url),
+                let image = UIImage(data: data)
+            {
+                DispatchQueue.main.async {
+                    self?.flagImageView.image = image
+                }
+            }
+        }
     }
 }

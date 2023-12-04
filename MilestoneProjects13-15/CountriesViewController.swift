@@ -45,6 +45,7 @@ final class CountriesViewController: UITableViewController {
                 detailedViewController.area = "\(String(describing: countries[indexPath.row].area))"
                 detailedViewController.capital = countries[indexPath.row].capital?[0] ?? ""
                 detailedViewController.population = "\(String(describing: countries[indexPath.row].population))"
+                detailedViewController.flagURL = countries[indexPath.row].flags?.png ?? ""
             }
         }
     }

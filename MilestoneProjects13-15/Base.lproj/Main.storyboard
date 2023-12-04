@@ -140,6 +140,7 @@
                     <connections>
                         <outlet property="areaLabel" destination="njU-55-vL0" id="F7S-5c-d2T"/>
                         <outlet property="capitalLabel" destination="bvr-qm-mun" id="na0-6l-DN0"/>
+                        <outlet property="flagImageView" destination="FRz-Q4-J9h" id="wcb-TL-hNY"/>
                         <outlet property="populationLabel" destination="BzZ-gw-AlQ" id="p9i-CU-dWU"/>
                         <outlet property="regionLabel" destination="ga3-aq-2A2" id="C8G-t5-ruF"/>
                     </connections>

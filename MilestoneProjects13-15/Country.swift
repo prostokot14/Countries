@@ -12,7 +12,7 @@ struct Country: Decodable {
     let population: Int
     let flag: String
     let capital: [String]?
-//    let flags: Flags
+    let flags: Flags?
 }
 
 struct Name: Decodable {
@@ -20,9 +20,9 @@ struct Name: Decodable {
 }
 
 struct Flags: Codable {
-    let png: String
-    let svg: String
-    let alt: String
+    let png: String?
+    let svg: String?
+    let alt: String?
 }
 
 //struct Currency: Decodable {
