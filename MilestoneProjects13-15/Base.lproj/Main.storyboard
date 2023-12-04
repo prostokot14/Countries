@@ -104,6 +104,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currencies:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WmJ-Jq-w9E">
+                                <rect key="frame" x="16" y="468" width="87.333333333333329" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92f-8d-wdZ">
+                                <rect key="frame" x="150" y="468" width="227" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CM0-jp-1Ai"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -115,6 +127,9 @@
                             <constraint firstItem="bvr-qm-mun" firstAttribute="leading" secondItem="KKB-hV-Bwr" secondAttribute="leading" constant="150" id="Afe-7b-Bk8"/>
                             <constraint firstItem="CM0-jp-1Ai" firstAttribute="trailing" secondItem="bvr-qm-mun" secondAttribute="trailing" constant="16" id="DaA-l2-2Ha"/>
                             <constraint firstItem="6wR-Ws-sdO" firstAttribute="top" secondItem="3oL-gM-5NK" secondAttribute="bottom" constant="8" id="HX7-EV-UeL"/>
+                            <constraint firstItem="CM0-jp-1Ai" firstAttribute="trailing" secondItem="92f-8d-wdZ" secondAttribute="trailing" constant="16" id="Mxa-MR-e3v"/>
+                            <constraint firstItem="WmJ-Jq-w9E" firstAttribute="leading" secondItem="CM0-jp-1Ai" secondAttribute="leading" constant="16" id="OBa-6i-vNc"/>
+                            <constraint firstItem="92f-8d-wdZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="WmJ-Jq-w9E" secondAttribute="trailing" constant="5" id="Pxx-kZ-Ich"/>
                             <constraint firstItem="3oL-gM-5NK" firstAttribute="leading" secondItem="CM0-jp-1Ai" secondAttribute="leading" constant="16" id="Qze-jg-Mfi"/>
                             <constraint firstItem="ga3-aq-2A2" firstAttribute="leading" secondItem="KKB-hV-Bwr" secondAttribute="leading" constant="150" id="ScM-5H-x9X"/>
                             <constraint firstItem="njU-55-vL0" firstAttribute="top" secondItem="3oL-gM-5NK" secondAttribute="top" id="T9O-WQ-uCo"/>
@@ -123,6 +138,7 @@
                             <constraint firstItem="ga3-aq-2A2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="LV4-3Z-Hri" secondAttribute="trailing" constant="5" id="Xwd-Vi-JFj"/>
                             <constraint firstItem="3oL-gM-5NK" firstAttribute="top" secondItem="LV4-3Z-Hri" secondAttribute="bottom" constant="8" id="ZyV-ta-73E"/>
                             <constraint firstItem="njU-55-vL0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3oL-gM-5NK" secondAttribute="trailing" constant="5" id="bWw-8x-uWR"/>
+                            <constraint firstItem="92f-8d-wdZ" firstAttribute="top" secondItem="WmJ-Jq-w9E" secondAttribute="top" id="cpZ-4z-Ash"/>
                             <constraint firstItem="BzZ-gw-AlQ" firstAttribute="leading" secondItem="KKB-hV-Bwr" secondAttribute="leading" constant="150" id="dPb-w0-2pO"/>
                             <constraint firstItem="CM0-jp-1Ai" firstAttribute="trailing" secondItem="BzZ-gw-AlQ" secondAttribute="trailing" constant="16" id="gmw-jz-Ras"/>
                             <constraint firstItem="ky4-Q3-Qpj" firstAttribute="leading" secondItem="CM0-jp-1Ai" secondAttribute="leading" constant="16" id="he0-eD-HFi"/>
@@ -131,7 +147,9 @@
                             <constraint firstItem="bvr-qm-mun" firstAttribute="top" secondItem="6wR-Ws-sdO" secondAttribute="top" id="lYv-sN-O2z"/>
                             <constraint firstItem="CM0-jp-1Ai" firstAttribute="trailing" secondItem="ga3-aq-2A2" secondAttribute="trailing" constant="16" id="mvk-Cp-Kdb"/>
                             <constraint firstItem="bvr-qm-mun" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6wR-Ws-sdO" secondAttribute="trailing" constant="5" id="qGO-5A-p5b"/>
+                            <constraint firstItem="WmJ-Jq-w9E" firstAttribute="top" secondItem="ky4-Q3-Qpj" secondAttribute="bottom" constant="8" id="qK5-Tj-m1p"/>
                             <constraint firstItem="ky4-Q3-Qpj" firstAttribute="top" secondItem="6wR-Ws-sdO" secondAttribute="bottom" constant="8" id="rhK-sc-Tkd"/>
+                            <constraint firstItem="92f-8d-wdZ" firstAttribute="leading" secondItem="KKB-hV-Bwr" secondAttribute="leading" constant="150" id="vsC-Bz-WY2"/>
                             <constraint firstItem="ga3-aq-2A2" firstAttribute="top" secondItem="LV4-3Z-Hri" secondAttribute="top" id="wCM-8j-Tlk"/>
                             <constraint firstItem="njU-55-vL0" firstAttribute="leading" secondItem="KKB-hV-Bwr" secondAttribute="leading" constant="150" id="yqV-WD-1N4"/>
                         </constraints>
@@ -140,6 +158,7 @@
                     <connections>
                         <outlet property="areaLabel" destination="njU-55-vL0" id="F7S-5c-d2T"/>
                         <outlet property="capitalLabel" destination="bvr-qm-mun" id="na0-6l-DN0"/>
+                        <outlet property="currenciesLabel" destination="92f-8d-wdZ" id="Zi6-Kv-yPo"/>
                         <outlet property="flagImageView" destination="FRz-Q4-J9h" id="wcb-TL-hNY"/>
                         <outlet property="populationLabel" destination="BzZ-gw-AlQ" id="p9i-CU-dWU"/>
                         <outlet property="regionLabel" destination="ga3-aq-2A2" id="C8G-t5-ruF"/>

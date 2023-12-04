@@ -16,13 +16,14 @@ final class CountriesViewController: UITableViewController {
         let urlString = "https://restcountries.com/v3.1/all"
         
         DispatchQueue.global(qos: .userInitiated).async {
-            if let url = URL(string: urlString) {
-                if let data = try? Data(contentsOf: url) {
-                    self.parce(json: data)
-                    return
-                }
+            if
+                let url = URL(string: urlString),
+                let data = try? Data(contentsOf: url)
+            {
+                self.parce(json: data)
+                return
             }
-
+            
             self.showError()
         }
         
@@ -46,6 +47,7 @@ final class CountriesViewController: UITableViewController {
                 detailedViewController.capital = countries[indexPath.row].capital?[0] ?? ""
                 detailedViewController.population = "\(String(describing: countries[indexPath.row].population))"
                 detailedViewController.flagURL = countries[indexPath.row].flags?.png ?? ""
+                detailedViewController.currencies = countries[indexPath.row].currencies?.values.first?.name ?? ""
             }
         }
     }
@@ -63,7 +65,11 @@ final class CountriesViewController: UITableViewController {
     
     private func showError() {
         DispatchQueue.main.async {
-            let alertController = UIAlertController(title: "Loading error", message: "There was a problem loading the feed; please check your connection and try again.", preferredStyle: .alert)
+            let alertController = UIAlertController(
+                title: "Loading error",
+                message: "There was a problem loading the feed; please check your connection and try again.",
+                preferredStyle: .alert
+            )
             alertController.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(alertController, animated: true)
         }

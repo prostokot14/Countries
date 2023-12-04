@@ -13,6 +13,7 @@ final class DetailedViewController: UIViewController {
     @IBOutlet private var capitalLabel: UILabel!
     @IBOutlet private var populationLabel: UILabel!
     @IBOutlet private var flagImageView: UIImageView!
+    @IBOutlet private var currenciesLabel: UILabel!
     
     var countryTitle = ""
     var region = ""
@@ -20,6 +21,7 @@ final class DetailedViewController: UIViewController {
     var capital = ""
     var population = ""
     var flagURL = ""
+    var currencies = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +33,7 @@ final class DetailedViewController: UIViewController {
         areaLabel.text = area
         capitalLabel.text = capital
         populationLabel.text = population
+        currenciesLabel.text = currencies
         
         DispatchQueue.global(qos: .userInitiated).async { [weak self] in
             if

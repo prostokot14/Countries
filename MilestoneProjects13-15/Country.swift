@@ -13,23 +13,17 @@ struct Country: Decodable {
     let flag: String
     let capital: [String]?
     let flags: Flags?
+    let currencies: [String: Currency]?
 }
 
 struct Name: Decodable {
     let official: String
 }
 
-struct Flags: Codable {
+struct Flags: Decodable {
     let png: String?
-    let svg: String?
-    let alt: String?
 }
 
-//struct Currency: Decodable {
-//    let name: String
-//    let symbol: String
-//}
-
-enum CodingKeys: String, CodingKey {
-    case code = "alpha2Code"
+struct Currency: Decodable {
+    let name: String?
 }
