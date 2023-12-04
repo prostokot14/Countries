@@ -90,7 +90,11 @@ extension CountriesViewController {
         
         if #available(iOS 14.0, *) {
             var content = cell.defaultContentConfiguration()
-            content.text = countries?[indexPath.row].name.official
+            content.text = if let flag = countries?[indexPath.row].flag {
+                "\(flag) \(countries?[indexPath.row].name.official ?? "")"
+            } else {
+                countries?[indexPath.row].name.official
+            }
             cell.contentConfiguration = content
         } else {
             cell.textLabel?.text = countries?[indexPath.row].name.official
