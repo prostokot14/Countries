@@ -27,6 +27,7 @@ final class DetailedViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.largeTitleDisplayMode = .never
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareInfo))
         
         title = countryTitle
         regionLabel.text = region
@@ -46,5 +47,13 @@ final class DetailedViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    @objc
+    private func shareInfo() {
+        guard let image = flagImageView.image else { return }
+        let info = "Country: \(countryTitle),\nRegion: \(region),\nArea: \(area),\nCapital: \(capital),\nPopulation: \(population),\nCurrency: \(currencies)"
+        let activityViewController = UIActivityViewController(activityItems: [image, info], applicationActivities: nil)
+        present(activityViewController, animated: true)
     }
 }
